@@ -3,13 +3,6 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail
-      class="justify-content-md-center"
-      *ngIf="selectedRecipe; else infoText"
-      [recipe]="selectedRecipe"
-    ></app-recipe-detail>
-    <ng-template #infoText>
-      <h5 class="text-danger text-center p-5 mt-5">Please select a recipe!</h5>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>
