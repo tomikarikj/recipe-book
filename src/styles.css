@@ -1,4 +1,8 @@
 body {
-  background-color: #fffcef;
+  background-color: #cac8c1;
   background-image: url('./assets/ag-square.png');
+}
+
+label {
+  color: #000000;
 }
