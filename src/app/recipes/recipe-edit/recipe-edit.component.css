@@ -1,0 +1,5 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1.5px solid #c40e0e;
+  transition-duration: 0.5s;
+}
