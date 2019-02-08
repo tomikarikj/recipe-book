@@ -10,7 +10,11 @@
           >
             {{ editMode ? 'Save Changes' : 'Submit' }}
           </button>
-          <button type="button" class="btn btn-danger float-right">
+          <button
+            type="button"
+            class="btn btn-danger float-right"
+            (click)="onCancel()"
+          >
             Cancel
           </button>
         </div>
