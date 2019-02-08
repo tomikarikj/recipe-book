@@ -86,7 +86,11 @@
               />
             </div>
             <div class="col-2">
-              <button class="btn btn-danger btn-sm">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                (click)="onDeleteIngredient(i)"
+              >
                 <i class="fas fa-times"></i>
               </button>
             </div>
