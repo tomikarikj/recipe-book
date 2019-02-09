@@ -5,8 +5,10 @@
   class="list-group-item list-group-item-action clearfix"
 >
   <div class="float-left">
-    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-    <p class="list-group-item-text">{{ recipe.desc }}</p>
+    <h4 class="list-group-item-heading">
+      {{ recipe.name | shorten: 25:' ...' }}
+    </h4>
+    <p class="list-group-item-text">{{ recipe.desc | shorten: 25:' ...' }}</p>
   </div>
   <span class="float-right">
     <img
