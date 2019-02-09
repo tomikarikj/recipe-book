@@ -17,6 +17,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeService } from './recipes/recipe.service';
+import { ShortenPipe } from 'ngx-pipes';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RecipeService } from './recipes/recipe.service';
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
