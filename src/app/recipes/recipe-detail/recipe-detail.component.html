@@ -46,13 +46,17 @@
 <div class="row">
   <div class="col-12">
     <h1 class="text-center">{{ recipe.name }}</h1>
-    <p class="text-center">{{ recipe.desc }}</p>
+    <p class="text-center" style="color: #1a1a1a">{{ recipe.desc }}</p>
   </div>
 </div>
 <div class="row">
   <div class="col-12">
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+      <li
+        class="list-group-item"
+        style="color: #55595c"
+        *ngFor="let ingredient of recipe.ingredients"
+      >
         {{ ingredient.name }} - {{ ingredient.amount }}
       </li>
     </ul>
