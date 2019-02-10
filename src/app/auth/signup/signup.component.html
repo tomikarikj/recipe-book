@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-6 col-md-3"></div>
+  <div class="col-6 col-md-6">
+    <form (ngSubmit)="onSignUp(f)" #f="ngForm">
+      <h1 class="text-center"><i class="fas fa-lock"></i> Sign Up</h1>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Password"
+          ngModel
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Sign Up
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary float-right"
+        routerLink="/signin"
+      >
+        Switch to Log In
+      </button>
+    </form>
+  </div>
+  <div class="col-6 col-md-3"></div>
+</div>
