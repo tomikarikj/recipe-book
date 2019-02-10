@@ -15,10 +15,14 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
 
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeService } from './recipes/recipe.service';
 import { DataStorageService } from './shared/data-storage.service';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
 import { ShortenPipe } from 'ngx-pipes';
 
 @NgModule({
@@ -33,7 +37,9 @@ import { ShortenPipe } from 'ngx-pipes';
     ShoppingEditComponent,
     RecipeStartComponent,
     RecipeEditComponent,
-    ShortenPipe
+    ShortenPipe,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,13 @@ import { ShortenPipe } from 'ngx-pipes';
     NgbModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService],
+  providers: [
+    ShoppingListService,
+    RecipeService,
+    DataStorageService,
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
