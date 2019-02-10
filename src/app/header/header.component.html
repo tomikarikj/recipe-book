@@ -17,31 +17,57 @@
         </li>
       </ul>
     </div>
-    <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-      <button
-        class="btn btn-primary mr-2"
-        id="dropdownManual"
-        ngbDropdownAnchor
-        (focus)="myDrop.open()"
-      >
-        <i class="fas fa-cog"></i> Data Settings
-      </button>
-      <div ngbDropdownMenu aria-labelledby="dropdownManual">
-        <button
-          class="dropdown-item"
-          style="cursor: pointer;"
-          (click)="onSaveData()"
-        >
-          Save Data
-        </button>
-        <button
-          class="dropdown-item"
-          style="cursor: pointer;"
-          (click)="onFetchData()"
-        >
-          Fetch Data
-        </button>
+    <ng-template [ngIf]="!authService.isAuthenticated()">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/signup">Register</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/signin">Log In</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </ng-template>
+    <ng-template [ngIf]="authService.isAuthenticated()">
+      <div
+        class="d-inline-block"
+        ngbDropdown
+        #myDrop="ngbDropdown"
+        *ngIf="authService.isAuthenticated()"
+      >
+        <button
+          class="btn btn-primary mr-2"
+          id="dropdownManual"
+          ngbDropdownAnchor
+          (focus)="myDrop.open()"
+        >
+          <i class="fas fa-cog"></i> Data Settings
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownManual">
+          <button
+            class="dropdown-item"
+            style="cursor: pointer;"
+            (click)="onSaveData()"
+          >
+            Save Data
+          </button>
+          <button
+            class="dropdown-item"
+            style="cursor: pointer;"
+            (click)="onFetchData()"
+          >
+            Fetch Data
+          </button>
+        </div>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <a class="nav-link" style="cursor: pointer;" (click)="onLogOut()"
+            ><i class="fas fa-sign-out-alt"></i> Log Out</a
+          >
+        </li>
+      </ul>
+    </ng-template>
   </div>
 </nav>
