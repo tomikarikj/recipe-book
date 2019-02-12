@@ -1,4 +1,6 @@
 body {
+  width: 100%;
+  height: 100%;
   background-color: #cac8c1;
   background-image: url('./assets/ag-square.png');
 }
