@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
+import { ShortenPipe } from 'ngx-pipes';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ShortenPipe],
   imports: [
     BrowserModule,
     HttpClientModule,
