@@ -10,7 +10,6 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipe-list/recipe-item/recipe-item.component';
-import { ShortenPipe } from 'ngx-pipes';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { ShortenPipe } from 'ngx-pipes';
     RecipeListComponent,
     RecipeEditComponent,
     RecipeDetailComponent,
-    RecipeItemComponent,
-    ShortenPipe
+    RecipeItemComponent
   ],
   imports: [CommonModule, ReactiveFormsModule, RecipesRoutingModule, NgbModule]
 })
